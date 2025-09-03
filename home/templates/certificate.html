@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        {% for cert in certificate %}
+        <div class="col-md-8 text-center my-4">
+            <h4 class="text-light">{{ cert.title }}</h4>
+            <img src="{% static cert.path %}" alt="image" class="img-fluid rounded shadow" style="max-height: 800px;">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

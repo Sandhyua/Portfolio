@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .experience-card {
+    background: linear-gradient(135deg, #1d3557, #457b9d); /* Blue gradient */
+    color: #f1faee;
+    border: none;
+    border-left: 5px solid #a8dadc; /* Light teal border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.experience-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+</style>
+<div class="container mt-5">
+    <h2 class="text-light mb-4">Experience</h2>
+
+    {% if experience %}
+        {% for exp in experience %}
+            <div class="card my-3 experience-card">
+                <div class="card-body">
+                    <h4 class="card-title">{{ exp.company }}</h4>
+                    <p><strong>Position:</strong> {{ exp.Position }}</p>
+                    <p><strong>Duration:</strong> {{ exp.duration }}</p>
+                    <p><strong>Description:</strong> {{ exp.description }}</p>
+                    
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-light">No experience yet.</p>
+    {% endif %}
+</div>
+{% endblock %}

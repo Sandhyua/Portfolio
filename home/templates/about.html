@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row my-5">
+  <div class=" col-4 d-flex justify-content-center align-items-center">
+    <img src="{% static '/images/sandhya.png' %}" alt="Image" class="about-image">
+  </div>
+
+  <div class="col-7 text-left text-light">
+    <h2>Hello !</h2>
+    <p>I'm a passionate and dedicated Python Developer with a strong background in building efficient, scalable, and real-world applications. I specialize in backend development using Django and Django REST Framework. I enjoy solving complex problems, writing clean and maintainable code, and continuously learning new technologies.
+       have hands-on experience in building REST APIs, integrating third-party services, working with databases like MySQL and SQLite, and deploying web applications. I'm also familiar with frontend technologies like HTML, CSS, Bootstrap, and JavaScript for creating responsive user interfaces.
+       Currently, I’m working on personal projects like an E-Commerce backend, a portfolio website, and a ToDo app to sharpen my development skills. I aim to contribute to real-world solutions and grow as a full-stack developer.
+       Let’s connect and build something impactful together!</p>
+  </div>
+</div>
+
+<div class="row my-2">
+        <h2 class="text-center" style=" color: #4fffb0;">My Tech Stck</h2>
+        <div class="d-flex justify-content-around align-items-center my-4">
+
+        <img src="{% static '\images\Html.jpg' %}" alt="HtmlImage" width="70" height="70" class="img-fluid"/>
+
+        <img src="{% static '\images\css.jpg' %}" alt="cssImage" width="70" height="70" class="img-fluid"/>
+
+        <img src="{% static '\images\js.jpg' %}" alt="jsImage" width="70" height="70" class="img-fluid"/>
+
+        <img src="{% static '\images\bootstrap.jpg' %}" alt="bootstrap" width="70" height="70" class="img-fluid"/>
+
+        <img src="{% static '\images\python.png' %}" alt="pythonImage" width="70" height="70" class="img-fluid"/>
+
+        <img src="{% static '\images\django.jpg' %}" alt="djangoImage" width="70" height="70" class="img-fluid"/>
+
+    </div>
+
+</div>
+
+ 
+
+
+{% endblock content %}

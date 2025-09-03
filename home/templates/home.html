@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  .social-link {
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.social-link:hover {
+    transform: scale(1.2); /* thoda bada ho jaye */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* shadow aaye */
+}
+
+</style>
+<div class="row my-5">
+  <div class="col-12 d-flex justify-content-center align-items-center">
+         <div class="circular-image-container">
+         <img class="circular-image" src="{% static '/images/sandhya.png' %} " alt="Image">
+
+         </div>
+  </div>
+
+      <div class="col-12 text-center mt-3">
+        <h4 class="title">Hi ,my name is </h4>
+           <div class="name">
+           <h1>Sandhya</h1>
+           <h4>I am Full stack Developer</h4>
+
+           </div>
+      </div>
+    <div class="col-12 text-center mt-3">
+        <div class=" col-12 d-flex justify-content-center align-items-center">
+           <a href="https://www.linkedin.com/in/sandhya-raj-7389a52a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="ms-3" >
+          
+             <img src="{% static '\images\linkdin.jpg' %}" alt="Linkdin" width="50" height="50"  class="social-link">
+
+           </a>
+
+           <a href="https://youtube.com/@sandhyaraj8084?si=UBCelsV1nYBib6wN" target="_blank" class="ms-3">
+          
+             <img src="{% static '\images\youtube.jpg' %}" alt="Linkdin" width="50" height="50" class="social-link" class="ms-3">
+
+            </a>
+           <a href="https://www.instagram.com/sandhyaa_sk01?igsh=YWRiZTR0MzNybHFj" target="_blank" class="ms-3">
+
+             <img src="{% static '\images\instagram.jpg' %}" alt="Linkdin" width="50" height="50" class="social-link">
+
+           </a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
